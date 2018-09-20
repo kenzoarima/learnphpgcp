@@ -1,0 +1,12 @@
+runtime: php
+env: flex
+runtime_config:
+    document_root: .
+env_variables:
+    APP_LOG: errorlog
+    GOOGLE_STORAGE_BUCKET: "try-phpappeng.appspot.com"
+    MYSQL_USER: "<your username>"
+    MYSQL_PASSWORD: "<your password>"
+    MYSQL_DSN: "mysql:dbname=testdb;unix_socket=/cloudsql/try-phpappeng:asia-southeast1:testsql"
+beta_settings:
+    cloud_sql_instances: "try-phpappeng:asia-southeast1:testsql"
