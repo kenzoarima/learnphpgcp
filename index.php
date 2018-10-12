@@ -4,13 +4,14 @@
  */
 
 require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/env.php';
 
 use Google\Cloud\Storage\StorageClient;
 
 $app = array();
 $app['bucket_name'] = "try-phpappeng.appspot.com";
-$app['mysql_user'] = "<user name>";
-$app['mysql_password'] = "<user password>";
+$app['mysql_user'] = $mysql_user;
+$app['mysql_password'] = $mysql_password;
 $app['mysql_dbname'] = "testdb";
 $app['project_id'] = getenv('GCLOUD_PROJECT');
 
