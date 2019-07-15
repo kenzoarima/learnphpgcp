@@ -1,5 +1,6 @@
 runtime: php
 env: flex
+entrypoint: gunicorn -b :$PORT main:app
 runtime_config:
     document_root: .
 env_variables:
